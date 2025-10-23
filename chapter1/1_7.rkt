@@ -7,7 +7,7 @@
 
 
 (define (good-enough? guess x)
-  (< (abs (- (square guess) x)) 0.001))
+  (< (abs (- (square guess) x)) 0.000000001)) ;; I reduced allowed gap.. for better approximation.
 
 (define (square x) (* x x))
 
@@ -21,8 +21,9 @@
 
 (sqrt 9)
 (sqrt 9999)
-(sqrt 9999999999)
+(sqrt 9999999999) ;; something wrong here. For large number, computation won't end. 
 (sqrt 0.00000001)
 (sqrt (+ 100 37))
 (sqrt (+ (sqrt 2) (sqrt 3)))
 (square (sqrt 1000))
+
