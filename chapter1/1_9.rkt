@@ -6,19 +6,19 @@
 (define (dec n)
   (- n 1))
 
-(define (+ a b)
-  (if (= a 0)
-      b
-      (inc (+ (dec a) b))))
-
-(+ 1 2)
-
 ; (define (+ a b)
 ;   (if (= a 0)
 ;       b
-;       (+ (dec a) (inc b))))
+;       (inc (+ (dec a) b))))
 
-; (+ 1 2)
+; (+ 3 4)
+
+(define (+ a b)
+  (if (= a 0)
+      b
+      (+ (dec a) (inc b))))
+
+(+ 3 4)
 
 
 ; two different version of (+ a b) are infinite recursion!
